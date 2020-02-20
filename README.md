@@ -6,16 +6,18 @@
 |email|string|null: false|
 |password|string|null: false|
 |nickname|string|null: false|
+
 ### Association
-- has_many :group
+- has_many :groups, through: :group_users
+- has_many :messages
+- has_many :groups_users
 
-
-##massagesテーブル
+##messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |body|text||
-|image|string|null: false|
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
@@ -23,15 +25,16 @@
 - belongs_to :group
 - belongs_to :user
 
-##groupテーブル
+##groupsテーブル
 
 Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
+
 ### Association
-- has_many :user
-- belongs_to:massage
+- has_many :users, through: :group_users
+- has_many :messages
+
 
 
 ##groups_usersテーブル
