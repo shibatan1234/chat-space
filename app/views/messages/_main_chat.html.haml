@@ -1,12 +1,14 @@
 .main   
   .main-header 
     .main-header__edit-btn
-      Edit
+      = link_to "Edit" ,edit_group_path(@group)
     .main-header__left-box
       %h2.main-header__left-box__current-group
-           
+        = @group.name  
       %ul.main-header__left-box__member-list
-            
+        Member:
+        - @group.users.each do |user|
+          = user.name
   .messages
     .upper-message
     = render @messages
