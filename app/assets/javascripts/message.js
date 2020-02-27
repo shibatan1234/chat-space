@@ -39,6 +39,7 @@ $(function(){
      return html;
    };
  }
+$("#submit").prop("disabled", true);
 $('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
@@ -55,7 +56,15 @@ $('#new_message').on('submit', function(e){
     var html = buildHTML(data);
     $('.messages').append(html);
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-    $('form')[0].reset();
   })
-})
+    $('form')[0].reset();
+    return false;
+  })
+  .fail(function() {
+    alert("メッセージ送信に失敗しました");
 });
+})
+
+
+
+
