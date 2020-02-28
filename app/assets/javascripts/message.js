@@ -60,8 +60,8 @@ $('#new_message').on('submit', function(e){
     $('form')[0].reset();
     return false;
   })
-  .fail(function() {
-    alert("メッセージ送信に失敗しました");
 });
+  // .fail(function() {
+  //   alert("メッセージ送信に失敗しました");
 
-})
+// })
