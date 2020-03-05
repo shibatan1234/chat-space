@@ -46,9 +46,13 @@
         color: white;
         font-size: 11px;
         text-decoration: none;
-        a{
-          text-decoration: none;
+        li{
+          a{
+            text-decoration: none;
+          }
+
         }
+        
     }
     }
   }
@@ -72,9 +76,11 @@
       position: absolute;
       right: 40px;
       text-decoration: none;
-      a{
-        text-decoration: none;
-      }  
+      li{
+        a{
+          text-decoration: none;
+      }
+    }
     } 
     &__left-box{
       margin-top: 35px;
