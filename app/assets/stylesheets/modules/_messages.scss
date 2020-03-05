@@ -1,10 +1,5 @@
 * {
   box-sizing: border-box;
-  
-}
-
-a:any-link {
-  text-decoration: none;
 }
 
 .side-bar{
@@ -27,7 +22,6 @@ a:any-link {
         li{
             a{
               color: white;
-              text-decoration: none;
           }
         }
       }
@@ -49,14 +43,9 @@ a:any-link {
       &__group-latest-message{
         color: white;
         font-size: 11px;
-        text-decoration: none;
-        li{
-          a{
-            text-decoration: none;
-          }
-
+        a{
+          text-decoration: none;
         }
-        
     }
     }
   }
@@ -78,13 +67,7 @@ a:any-link {
       margin-top: 30px;
       border: solid 1px #38aef0;
       position: absolute;
-      right: 40px;
-      text-decoration: none;
-      li{
-        a{
-          text-decoration: none;
-      }
-    }
+      right: 40px;  
     } 
     &__left-box{
       margin-top: 35px;
@@ -129,6 +112,9 @@ a:any-link {
       color: #434a54;
       font-size:  14px;
       margin-bottom: 10px;
+      a{
+        text-decoration: none;
+      }
       
     }
 
